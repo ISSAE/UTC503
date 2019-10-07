@@ -1,0 +1,18 @@
+remote_theme: ISSAE/architect
+
+name: Paradigme de programmation
+
+author: Pascal Fares
+
+author_email: pascal.fares@isae.edu.lb
+
+title: Paradigme de programmation 
+
+google_analytics: UA-29708002-2
+
+repository: ISSAE/UTC503
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
