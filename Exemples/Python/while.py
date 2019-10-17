@@ -1,7 +1,5 @@
-x=0
-a=0
-print(x)
-print(a)
+x,a=0,0
+print(x,a)
 while (x<10):
     x=x+1
     print("Dans la boucle ",x,end=": ")
@@ -9,10 +7,8 @@ while (x<10):
 print("\nA la sortie de la boucle x>=10",x)
 print("Que vaut a? ", a)
 print("\n===Nouvelle execution===\n")
-x=0
-a=0
-print(x)
-print(a)
+x,a=0,0
+print(x,a)
 while (x<10):
     x=x+1
     print("Dans la boucle ",x,end=": ")
