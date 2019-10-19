@@ -19,7 +19,6 @@ def controleEntreeEtSol(a,b):
             return "Infinité de solutions"
         else:
             return "Impossible pas de solutions"
-
     else:
         return premDegre(a,b)
     
