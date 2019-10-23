@@ -12,7 +12,7 @@ class Personne:
 
 p1=Personne("Un nom",10)
 print(p1.nom,p1.age)
- v          
+       
 # Methodes
 class Personne2:
     #self represente le premier paramètre l'objet lui meme
@@ -27,8 +27,12 @@ p2=Personne2("Un nom",10)
 p2.uneMethode()
 
 class Exemple:
+    """Exemple pour montrer qu'en Python
+    Pas de surcharge"""
+    #Pas de surcharge
     def f(self):
         return 1
+    #Pas de surcharge
     def f(self,x):
         return x
 
