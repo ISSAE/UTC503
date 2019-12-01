@@ -1,12 +1,17 @@
 class base:
 	def affiche(self):
-		print("je suis la base")
- 
+		print("je suis la base")		
+
+
 class filleA(base):
-	def affiche(self):
-		base.affiche(self)
+	def affiche(this):
+		base.affiche(this)
 		print ("filleA")
- 
+class marchePas:
+	def affiche(this):
+		base.affiche(this)
+		print ("marchePas")
+
 class filleB(base):
 	def affiche(self):
 		print ("filleB")
@@ -18,6 +23,12 @@ class filleD(base):
     def affiche(self, plus):
         base.affiche(self)
         print ("filleB", plus)
+	def toto(self):
+		print("Methode toto")
+
+class filleComplexe(filleA,filleD):
+	pass
+
 a=filleA()
 a.affiche()
 #je suis la base

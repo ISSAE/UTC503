@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 """Exemple de sous-programme (fonction). """
+
+print(__name__)
+
 def index(sequence, element):
   """Chercher l'indice de la première occurrence de 'elemnt' dans 'sequence'
   
@@ -9,11 +12,13 @@ def index(sequence, element):
   :raises ValueError: l'élément n'est pas dans la séquence
   """
   for indice, elt in enumerate(sequence):
-    # print(indice, elt)
+    print(indice, elt)
     if elt == element: # On l'a trouvé !
         return indice
   else: # jamais trouvé. Attention ici le else pour for pas pour if!
         raise ValueError('élement non trouvé')
+       #return 'élement non trouvé'
+
 
 if __name__ == "__main__": # Si Le fichier est exécuté comme programme principal 
     assert index([1, 4, 2, 6], 1) == 0

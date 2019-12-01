@@ -1,6 +1,8 @@
 class X:
     def __m(self):
         return ('dans __m')
+    def f(self):
+      return(self.__m())
 
 '''$ python -i encapsul.py 
 >>> x=X()

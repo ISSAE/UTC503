@@ -1,5 +1,6 @@
 class Point: 
-    pass 
+    def tester(self):
+        print(self.x) 
  
 p1 = Point() 
 p2 = Point() 

@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 x,a=0,0
 print(x,a)
 while (x<10):

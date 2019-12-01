@@ -6,9 +6,9 @@ print(mc.x)
 
 #Constructeur (ou initialisation de la classe)
 class Personne:
-    def __init__(self, nom, age):
-        self.nom=nom
-        self.age=age
+    def __init__(moi, nom, age):
+        moi.nom=nom
+        moi.age=age
 
 p1=Personne("Un nom",10)
 print(p1.nom,p1.age)
@@ -20,8 +20,10 @@ class Personne2:
     def __init__(moi, nom, age):
         moi.nom=nom
         moi.age=age
-    def uneMethode(self):
-        print("Mon nom {} et age {}".format(self.nom,self.age))
+    def uneMethode(x):
+        print("Mon nom {} et age {}".format(x.nom,x.age))
+    def m():
+        print("m")
 
 p2=Personne2("Un nom",10)
 p2.uneMethode()
@@ -35,4 +37,6 @@ class Exemple:
     #Pas de surcharge
     def f(self,x):
         return x
+    def m():
+        return 1
 

@@ -6,7 +6,12 @@
 
 ###R021: Verifier a!=0
 ###R022: calculer -b/a
-
+'''
+   bla bla bla
+'''
+"""
+  bli bli bli
+"""
 # premDegre calcul -b/a a condition d'être sure que a!=0
 def premDegre(a,b):
     # assert permet de faire de la programation deffensive
@@ -26,6 +31,11 @@ def controleEntreeEtSol(a,b):
 
 
 def pgmPremDegre1():
+    ''' 
+       C'est le calcule de la solution 
+       d'une equation du premier degré
+    '''
+    
     print("saisir a et b pour calculer ax+b=0")
     x=int(input("Donner a "))
     y=int(input("Donner b "))
