@@ -1,9 +1,12 @@
 #Factoriel Recursive
-def fact(n):
+def _fact(n):
+    ''' factorielle d'un entier naturel (n>=0 en Python) '''
     assert n>=0, "Factoriel d'un nombre positif ou nul uniquement!"
     if (n==0): return 1
     else: return n*fact(n-1)
+# TODO Fcatoriel à étendre aux nombre négatif (-n)!
 
+# d'autres solutions itérative cas n>=0
 def factWhile(n):
     #0!=1
     F=1
