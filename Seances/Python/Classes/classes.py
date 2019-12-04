@@ -1,13 +1,25 @@
+"""
+  Il existe des différences entre Python2 et Pythoin3 
+  Faire attention
+"""
 class MaClass:
-    x=3
+ ''' Maclass définit un namespace (espace de nommage) '''
+    x=3 #Attribut de classe
 
 mc=MaClass()
-print(mc.x)
+print(f"MaClass.x = {MaClass.x} mc.x = {mc.x}")
+mc.x=10
+print(f"MaClass.x = {MaClass.x} mc.x = {mc.x}")
 
 #Constructeur (ou initialisation de la classe)
 class Personne:
     def __init__(moi, nom, age):
-        moi.nom=nom
+        '''Initialisation de l'instance
+
+        exemple Utilisation:
+            p=Personne('nom',age)
+        '''
+        moi.nom=nom #Attribut d'objet
         moi.age=age
 
 p1=Personne("Un nom",10)
@@ -39,4 +51,6 @@ class Exemple:
         return x
     def m():
         return 1
+
+
 
