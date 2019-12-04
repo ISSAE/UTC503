@@ -14,5 +14,12 @@ class Mammiferes:
     def __init__(self,nom, age):
         self.nom=nom #attribut d'instance
         self.age=age
+    def setEspece(self,esp):
+        Mammiferes.espece=esp
+    def setNespece(self,esp):
+        self.espece=esp
+    def setDespece(self):
+        espece=esp
+
 
 

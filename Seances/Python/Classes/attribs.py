@@ -3,6 +3,9 @@ class UneClasse:
     Particulier"""
     def __init__(self):
         self.x=2
+    def __init__(self,x=0,y=0):
+        self.x=x
+        self.y=y
     def f(self):
         """self represente l'objet lui meme, self n'est pas
         un mot clé"""

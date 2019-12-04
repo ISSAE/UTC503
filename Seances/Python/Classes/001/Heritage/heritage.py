@@ -1,4 +1,6 @@
 class base:
+	def pasmethode():
+		return "Pas Methode"
 	def affiche(self):
 		print("je suis la base")		
 
@@ -7,6 +9,8 @@ class filleA(base):
 	def affiche(this):
 		base.affiche(this)
 		print ("filleA")
+
+## meme celle ci marche!
 class marchePas:
 	def affiche(this):
 		base.affiche(this)

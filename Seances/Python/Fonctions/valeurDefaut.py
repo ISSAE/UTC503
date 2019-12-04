@@ -6,11 +6,16 @@ fonc(b=100,e=100)
 
 #opérateur splat
 def f(*params):
+    print(params)
     for p in params:
         print(p)
 
 def g(**params):
     for cle in params:
         print("cle={} valeur={}".format(cle,params[cle]))
+
+def g2(**params):
+    for cle in params:
+        print(f"cle={cle} valeur={params[cle]}")
 
 
