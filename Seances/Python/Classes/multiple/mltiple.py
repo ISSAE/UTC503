@@ -1,6 +1,10 @@
 class Base:
-    def m(self):
-        return f"Dans Base"
+    
+    def add(x,y):
+        return x+y
+    
+    def m(self, x=0):
+        return f"Dans Base {x}"
 
 class A(Base):
     def m(self,x):

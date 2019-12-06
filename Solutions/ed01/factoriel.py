@@ -3,8 +3,15 @@ def _fact(n):
     ''' factorielle d'un entier naturel (n>=0 en Python) '''
     assert n>=0, "Factoriel d'un nombre positif ou nul uniquement!"
     if (n==0): return 1
-    else: return n*fact(n-1)
+    else: return n*_fact(n-1)
+def _factNeg(n):
+    assert n<=0,"Calcul la d=factpriel d'un nombre négatif uniquement"
+    if (n==0): return 1
+    else: return n*_factNeg(n+1)
 # TODO Fcatoriel à étendre aux nombre négatif (-n)!
+def fact(n):
+    if (n<0): return _factNeg(n)
+    else: return _fact(n)
 
 # d'autres solutions itérative cas n>=0
 def factWhile(n):
@@ -21,7 +28,7 @@ def factIter(n):
     assert n>=0, "Factoriel d'un nombre positif ou nul uniquement!"
     F=1
     # Verifier comment fonctionne range
-    for i in range(n):
+    for i in range(0,n):
         # Range de 0 à n-1 (donc i+1 pour 1 à n)
         F=F*(i+1)
     return F

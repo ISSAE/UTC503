@@ -40,13 +40,13 @@ if __name__ == '__main__':
     assert r1.x==4 and r1.y==10 and r1.direction==1
     r1.afficher(prefix='r1 = ')
     r2 = Robot(15, 7, 'sud')
-    assert r2.x==15 and r1.y==7 and r1.direction==2
+    assert r2.x==15 and r2.y==7 and r2.direction==2
     r2.afficher(prefix='r2 = ')
     r1.pivoter()
     assert r1.x==4 and r1.y==10 and r1.direction==2
     r1.afficher(prefix='pivoter r1 = ')
     r2.avancer()
-    assert r2.x==15 and r1.y==6 and r1.direction==2
+    assert r2.x==15 and r2.y==6 and r2.direction==2
     r2.afficher(prefix='avancer r2 = ')
     #Utilisation comme fonction dans un namespace ... 
     Robot.pivoter(r2)
