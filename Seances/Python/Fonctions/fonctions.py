@@ -21,6 +21,25 @@ def fact(n):
     else:
         return n*fact(n-1)
 
+def fact(n):
+    if n:
+        return n*fact(n-1)
+    else:
+        return 1
+
+def taille(l):
+    if l:
+        return 1+ taille(l[1:])
+    else:
+        return 0
+
+def somme(l):
+    print("Appel de somme avec ",l)
+    if l:
+        return l[0]+ somme(l[1:])
+    else:
+        return 0
+
 def calculette():
     while (True):
         exp=input("Entrer votre formule : ")
@@ -61,3 +80,12 @@ def factAndOr(n):
 fonc=uneFonc
 
 #uneFonc=decorer(uneFonc)
+
+
+#Pour le passage de param1ètre
+def f(x):
+    print(id(x))
+    x=100
+    print(id(x))
+    print(id(100))
+
