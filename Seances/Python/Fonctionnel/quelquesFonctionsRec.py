@@ -26,9 +26,17 @@ def somme(l):
     '''
     print("Appel de somme avec ",l)
     if l:
-        return l[0]+ somme(l[1:])
+        return l[0] + somme(l[1:])
     else:
         return 0
 
 #Version Lambda
 sommeL=lambda l: l[0]+sommeL(l[1:]) if l else 0
+
+#Quelues exemples et tests
+if __name__ == '__main__':
+    l=[1,2,3,4.5,-2]
+    assert tailleL(l) == 5
+    print(tailleL(l))
+    assert sommeL(l) == 8.5
+    print(sommeL(l))
