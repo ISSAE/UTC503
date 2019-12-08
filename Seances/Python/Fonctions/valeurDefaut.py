@@ -9,13 +9,21 @@ def f(*params):
     print(params)
     for p in params:
         print(p)
+f(1,2,3,4)
 
 def g(**params):
+    print(params)
     for cle in params:
-        print("cle={} valeur={}".format(cle,params[cle]))
+        print(f"cle={cle} valeur={params[cle]}")
+g(x=2,k=5,w=9)
+
+def fg(*params, **kparams):
+    print(params,kparams)
+fg(1,2,3,d=10,w=30)
 
 def g2(**params):
     for cle in params:
-        print(f"cle={cle} valeur={params[cle]}")
+        print("cle={} valeur={}".format(cle,params[cle]))
+
 
 
