@@ -1,37 +1,38 @@
 class base:
-	def pasmethode():
-		return "Pas Methode"
-	def affiche(self):
-		print("je suis la base")		
+  def pasmethode():
+    return "Pas Methode"
+  def affiche(self):
+    print("je suis la base")
+  def uneM(self):
+    return "uneM dans base"  
 
 
 class filleA(base):
-	def affiche(this):
-		base.affiche(this)
-		print ("filleA")
+  def affiche(this):
+    base.affiche(this)
+    print ("filleA")
 
 ## meme celle ci marche!
 class marchePas:
-	def affiche(this):
-		base.affiche(this)
-		print ("marchePas")
+  def affiche(this):
+    base.affiche(this)
+    print ("marchePas")
 
 class filleB(base):
-	def affiche(self):
-		print ("filleB")
+  def affiche(self):
+    print ("filleB")
  
 class filleC(base):
-	pass
+  pass
 
 class filleD(base):
-    def affiche(self, plus):
-        base.affiche(self)
-        print ("filleB", plus)
-	def toto(self):
-		print("Methode toto")
+  def affiche(self, plus):
+    base.affiche(self)
+    print("filleB", plus)
 
 class filleComplexe(filleA,filleD):
-	pass
+  def affiche(self):
+    	  filleA.affiche()
 
 a=filleA()
 a.affiche()

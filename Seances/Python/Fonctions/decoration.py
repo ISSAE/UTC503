@@ -5,10 +5,18 @@ def mon_decorateur(fonction):
     """Entourer une fonction Aspect O P"""
     def autre_fonction(*param, **param2):
         print("Action avant .............. ", param, param2)
-        fonction(*param, **param2)
+        if (param and param2): 
+            fonction(*param, **param2)
+        elif param:
+            fonction(*param)
+        else:
+            fonction(**param2)
         print("Action après ..............", param, param2)
     return autre_fonction
 
+def fact(n):
+    if n==0: return 1
+    else: return n*fact(n-1)
 
 @mon_decorateur
 def do_that(v, x):

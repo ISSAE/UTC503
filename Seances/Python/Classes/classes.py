@@ -3,7 +3,9 @@
   Faire attention
 """
 class MaClass:
- ''' Maclass définit un namespace (espace de nommage) '''
+    '''
+        Maclass définit un namespace (espace de nommage)
+    '''
     x=3 #Attribut de classe
 
 mc=MaClass()
@@ -54,3 +56,6 @@ class Exemple:
 
 
 
+class badInit:
+    def __init__(toto):
+        toto.x=5
