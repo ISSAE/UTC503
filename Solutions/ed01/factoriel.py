@@ -1,3 +1,4 @@
+
 #Factoriel Recursive
 def _fact(n):
     ''' factorielle d'un entier naturel (n>=0 en Python) '''
@@ -5,13 +6,14 @@ def _fact(n):
     if (n==0): return 1
     else: return n*_fact(n-1)
 def _factNeg(n):
-    assert n<=0,"Calcul la d=factpriel d'un nombre négatif uniquement"
+    assert n<=0,"Calcul la factorielle d'un nombre négatif uniquement"
     if (n==0): return 1
     else: return n*_factNeg(n+1)
-# TODO Fcatoriel à étendre aux nombre négatif (-n)!
+# TODO Factorielle à étendre aux nombre négatif (-n)!
 def fact(n):
     if (n<0): return _factNeg(n)
     else: return _fact(n)
+
 # Factorielle récursive terminale (par accumulation)
 def _factTer(i,acc,n):
     # Invariant acc=i!
@@ -21,6 +23,7 @@ def factTer(n):
     # 0!=1
     # i=0, acc=1
     return _factTer(0,1,n)
+
 # d'autres solutions itérative cas n>=0 issue de la récursivité
 def factWhile(n):
     #0!=1
@@ -45,7 +48,7 @@ def factIter(n):
         F=F*(i+1)
     return F
 
-#Factoriel recusive en pure fonction (lambda)
+#Factoriel récursive en pure fonction (lambda)
 factL = lambda n: n*factL(n-1) if n else 1
 
 #Une astuce pour tester le module quand on lance le programme directement 
