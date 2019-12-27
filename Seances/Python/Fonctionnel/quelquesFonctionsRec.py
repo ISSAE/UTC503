@@ -30,6 +30,24 @@ def somme(l):
     else:
         return 0
 
+
+def unique(l):
+    '''
+       elimine les doublons d'une liste
+    '''
+    def _unique(reste):
+        if (l[0] in reste): return reste
+        else: return reste + [l[0]]
+    if l: return _unique(l[1:])
+    else: return l
+
+def uniqueSemiFonc(l):
+    if not l: return l
+    else:
+        u=unique(l[1:])
+        if (l[0] in u): return u
+        else: return [l[0]]+u
+
 #Version Lambda
 sommeL=lambda l: l[0]+sommeL(l[1:]) if l else 0
 
