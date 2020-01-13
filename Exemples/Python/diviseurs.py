@@ -7,11 +7,11 @@ def diviseur_l(n):
             res.append(i)
         i=i+1
     return res
-print(diviseur(n))
+print(diviseur_l(n))
 
 def diviseur_lc(n):
     return [i for i in range(n) if n%i == 0]
-print(diviseur(n))
+print(diviseur_lc(n))
 
 def diviseur_g(n):
     yield 1
@@ -22,4 +22,4 @@ def diviseur_g(n):
         i=i+1
 
 def diviseur_gc(n):
-    return (i for i in range(n) if n%i == 0)
+    return (i for i in range(1,n+1) if n%i == 0)

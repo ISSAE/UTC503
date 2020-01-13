@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
 # Un exemple de fonction f(x)=x**2-3
 def f(x):

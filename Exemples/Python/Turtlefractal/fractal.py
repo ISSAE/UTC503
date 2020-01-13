@@ -1,4 +1,4 @@
-import turtle,random
+import turtle,random,sys
 
 
 _color=('black', 'red', 'blue', 'yellow', 'purple', 'cyan', 'Burlywood', 'Aquamarine')
@@ -20,6 +20,9 @@ def _fract1(turt, taille,min):
 
 
 def fract1(taille, min=5):
+    ''' Taille initiale du segment
+        min taille d'arret du fractal
+    '''
     t=turtle.Turtle()
     t.pensize(3)
     t.up()
@@ -27,6 +30,13 @@ def fract1(taille, min=5):
     t.down()
     _fract1(t,taille,min)
 
-fract1(1000,50)
+taille=1000
+min=25
+if len(sys.argv) ==  2:
+   taille=int(sys.argv[1])
+   min=int(sys.atgv[2])
+
+
+fract1(taille,min)
 input("Une touche pour terminer")
 

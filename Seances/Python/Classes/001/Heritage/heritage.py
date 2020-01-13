@@ -4,7 +4,8 @@ class base:
   def affiche(self):
     print("je suis la base")
   def uneM(self):
-    return "uneM dans base"  
+        self.x=10
+        return f"uneM dans base {self.x}"  
 
 
 class filleA(base):
@@ -30,9 +31,9 @@ class filleD(base):
     base.affiche(self)
     print("filleB", plus)
 
-class filleComplexe(filleA,filleD):
-  def affiche(self):
-    	  filleA.affiche()
+class filleComplexe(filleC,filleD):
+   def affiche(self):
+         filleC.affiche()
 
 a=filleA()
 a.affiche()
