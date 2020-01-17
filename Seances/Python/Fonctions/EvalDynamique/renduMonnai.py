@@ -13,15 +13,23 @@ def rendreUneSolution(somme=_somme,sp=_systemePieces):
         return []
 
 def rendreTouteSolution(somme=_somme,sp=_systemePieces):
-    #la priece la plus grande
-    if sp:
+    print(somme,sp,sp[0])
+    if sp[0] == 1:
+        #La somme restante doit être rendu entièrement avec des pièces de 1
+        return [[{1:somme}]]
+    else:
+        # En principe il y a encore plusieurs pièces dans le système
         pg=sp[0]
         #somme=q*pg+r
         q=somme//pg
         # r=somme%pg
-        return [[(pg,v),*rendreUneSolution(somme-v*pg,sp[1:])] for v in range(q+1)]
-    else:
-        return []
+        return [ensemblePossibilité(somme, sp[0],v,sp[1:]) for v in range(q+1)]
+
+def ensemblePossibilité(somme, piece, nbPieces, restePieces):
+    print(f"dans ensemble {rendreTouteSolution(somme-nbPieces*piece,restePieces)}")
+    return [{piece:nbPieces,**t} for t in flatten(rendreTouteSolution(somme-nbPieces*piece,restePieces))]
+
+flatten = lambda l: [item for sublist in l for item in sublist]
 
 #exemple et test
 if __name__ == '__main__':
