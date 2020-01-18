@@ -19,7 +19,7 @@ def rendreTouteSolution(somme=_somme,sp=_systemePieces):
         #somme=q*pg+r
         q=somme//pg
         # r=somme%pg
-        return [[(pg,v),*rendreUneSolution(somme-v*pg,sp[1:])] for v in range(q+1)]
+        return [[(pg,v),*rendreTouteSolution(somme-v*pg,sp[1:])] for v in range(q+1)]
     else:
         return []
 

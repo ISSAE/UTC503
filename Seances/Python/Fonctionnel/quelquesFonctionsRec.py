@@ -1,3 +1,6 @@
+tete=lambda l: l[0]
+reste=lambda l: l[1:]
+
 #Calcul de la taille d'une liste version récursive
 def taille(l):
     if l:

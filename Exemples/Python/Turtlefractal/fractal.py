@@ -1,7 +1,8 @@
 import turtle,random,sys
 
 
-_color=('black', 'red', 'blue', 'yellow', 'purple', 'cyan', 'Burlywood', 'Aquamarine')
+_color=('black', 'red', 'blue', 'yellow', 
+'purple', 'cyan', 'Burlywood', 'Aquamarine')
 def getColor():
     return _color[random.randrange(0,7)]
 
@@ -32,6 +33,7 @@ def fract1(taille, min=5):
 
 taille=1000
 min=25
+print(sys.argv)
 if len(sys.argv) ==  2:
    taille=int(sys.argv[1])
    min=int(sys.atgv[2])
