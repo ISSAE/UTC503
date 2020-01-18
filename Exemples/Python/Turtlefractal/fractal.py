@@ -32,9 +32,10 @@ def fract1(taille, min=5):
 
 taille=1000
 min=25
-if len(sys.argv) ==  2:
+print(sys.argv)
+if len(sys.argv) ==  3:
    taille=int(sys.argv[1])
-   min=int(sys.atgv[2])
+   min=int(sys.argv[2])
 
 
 fract1(taille,min)
