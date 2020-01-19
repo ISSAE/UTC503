@@ -43,7 +43,7 @@ def inserer_dans_liste_trie_up(e, l):
         return [e]
 
 def reduire(op,vi,l):
-    ''' op: operateur 2 parmètres élement liste
+    ''' op: operateur 2 parmètres élement et liste
       vi: valeur defaut si liste vide
       l: la sequence
     '''
@@ -58,6 +58,29 @@ reduire(inserer_dans_liste_trie_up,[],[-10,-100,5,20,3])
 reduire(lambda x,y: 1+y,0,[1,2,3,4,5])
 reduire(lambda x,y: x+y,0,[1,2,3,4,5])
 
-#ce shémas c'est reduce : Utilisation de reduce :liste vers scalaire
+#Un shémas appelé reduce dans Python existe: Utilisation de reduce :liste vers scalaire
 from functools import reduce
+
+#Reduce en Python est différent de reduire 
+# par exemple
+# reduce(lambda x, y: x+y, [1, 2, 3, 4, 5]) calcul
+# ((((1+2)+3)+4)+5)
+# essayer reduire(lambda x,y: 1+y,[1,2,3,100]) et reduce(lambda x,y: 1+y,[1,2,3,100])
+# reduce de Python traitement au niveaux des éléments reduire schémas de récursivité
+
+#Quelques exemple de reduce
+# Une liste initiale... en style fonctionnel
+lis = lambda : [ 1 , 3, 5, 6, 2, ] 
+# Au lieu d'une affectation 
+# lis=[ 1 , 3, 5, 6, 2, ]
+  
+# using reduce to compute sum of list 
+print ("The sum of the list elements is : ",end="") 
+print (reduce(lambda a,b : a+b,lis())) 
+  
+# using reduce to compute maximum element from list 
+print ("The maximum element of the list is : ",end="") 
+print (reduce(lambda a,b : a if a > b else b,lis())) 
+
+#Ecrire le résulat pour min
 
