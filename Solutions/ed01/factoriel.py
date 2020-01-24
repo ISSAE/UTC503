@@ -5,10 +5,10 @@ def _fact(n):
     if (n==0): return 1
     else: return n*_fact(n-1)
 def _factNeg(n):
-    assert n<=0,"Calcul la d=factpriel d'un nombre négatif uniquement"
+    assert n<=0,"Calcul la d=factorielle d'un nombre négatif uniquement"
     if (n==0): return 1
     else: return n*_factNeg(n+1)
-# TODO Fcatoriel à étendre aux nombre négatif (-n)!
+# TODO Factorielle à étendre aux nombre négatif (-n)!
 def fact(n):
     if (n<0): return _factNeg(n)
     else: return _fact(n)
@@ -33,8 +33,8 @@ def factIter(n):
         F=F*(i+1)
     return F
 
-#Factoriel recusive en pure fonction (lambda)
-factL = lambda n: n*factL(n-1) if n else 1
+#Factoriel récursive en pure fonction (lambda) n<0 et >0
+factL = lambda n: n*factL(n-1 if n>=0 else n+1) if n else 1
 
 #Une astuce pour tester le module quand on lance le programme directement 
 # python factoriel.py
