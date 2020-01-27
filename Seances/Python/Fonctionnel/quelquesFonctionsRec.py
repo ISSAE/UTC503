@@ -33,7 +33,7 @@ def somme(l):
     else:
         return 0
 
-
+sommel=lambda l: l[0]+sommel(l[1:]) if l else 0
 def unique(l):
     '''
        elimine les doublons d'une liste

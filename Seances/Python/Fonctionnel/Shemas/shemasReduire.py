@@ -55,8 +55,8 @@ def reduire(op,vi,l):
  
 #exemple
 reduire(inserer_dans_liste_trie_up,[],[-10,-100,5,20,3])
-reduire(lambda x,y: 1+y,0,[1,2,3,4,5])
-reduire(lambda x,y: x+y,0,[1,2,3,4,5])
+reduire(lambda t,r: 1+r,0,[11,2,3,4,5])
+reduire(lambda t,r: t+r,0,[1,2,3,4,5])
 
 #Un shémas appelé reduce dans Python existe: Utilisation de reduce :liste vers scalaire
 from functools import reduce
@@ -82,5 +82,32 @@ print (reduce(lambda a,b : a+b,lis()))
 print ("The maximum element of the list is : ",end="") 
 print (reduce(lambda a,b : a if a > b else b,lis())) 
 
-#Ecrire le résulat pour min
+#TODO: Ecrire le résulat pour min
+
+
+##  Complément fold_left et fold_right (le reduce de python)
+def tete(l): return l[0]
+def reste(l): return l[1:]
+## Fold_left et Fold_right
+def fold_left(op, a, l):
+    if l:
+        return fold_left(op, op(a,tete(l)), reste(l))
+    else:
+        return a
+
+#fold est recursive terminale.... voici sa version impérative
+def foldLeft(op,a,l):
+    fl=a
+    while(l):
+        fl=op(fl,tete(l))
+        l=reste(l)
+    return fl
+
+''' exemple
+>>> fold_left(lambda x,y: x+y,0, [1,2,3,4])
+10
+>>> foldLeft(lambda x,y: x+y,0, [1,2,3,4])
+10
+'''
+cons=lambda a,l: [a,*l]
 
