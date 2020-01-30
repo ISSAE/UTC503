@@ -1,3 +1,13 @@
+def f(x):
+    return x+1
+
+def myrange(debut, fin):
+    yield debut
+    while debut < fin:
+        debut = debut +1
+        yield debut
+
+
 def pair0(n):
     i=0
     l=[]

@@ -1,4 +1,4 @@
-def filter(p,l):
+def _filter(p,l):
     if l:
         if (p(l[0])): return [l[0], *filter(p,l[1:])]
         else: return filter(p,l[1:])
