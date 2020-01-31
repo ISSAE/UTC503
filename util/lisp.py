@@ -1,5 +1,25 @@
 '''
 Module lisp : LISt Processing inspiré du langage Lisp du même nom
+
+Exemple d'utilisation et test:
+
+>>> tete(cons(1,[]))
+1
+>>> reste(cons(1,[]))
+[]
+>>> reste(cons(1,[2,3]))
+[2, 3]
+>>> tete([])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/pascalfares/mesgit/UTC503/util/lisp.py", line 12, in tete
+    assert l, "La tete n'existe pas ! si la liste est vide..."
+AssertionError: La tete n'existe pas ! si la liste est vide...
+>>> tete([1,2,3,4])
+1
+
+>>> cons(tete([1,2,3]),reste([1,2,3])) == [1,2,3]
+True
 '''
 # tête de la liste : car en lisp
 # tete = lambda l: l[0]
@@ -58,9 +78,8 @@ def cons(t,r):
     '''
     return _cons(t)(r)
 
+
 if __name__ == '__main__':
-    ''' Pour tester '''
-    assert tete([1,2,3]) == 1
-    assert reste([1,2,3]) == [2,3]
-    assert cons(tete([1,2,3]),reste([1,2,3])) == [1,2,3]
-    assert cons(1,[]) == [1]
+    ''' Pour tester utilise les commentaire du code '''
+    import doctest
+    doctest.testmod()
