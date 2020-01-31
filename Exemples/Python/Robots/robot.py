@@ -13,6 +13,7 @@ class Robot:
         return Robot._directions[idDirection]
 
     def _idDirection(nomDirection):
+        assert nomDirection in Robot._directions, "N'est pas une diction"
         return Robot._directions.index(nomDirection)
 
     def __init__(self, x, y, direction):
@@ -31,26 +32,26 @@ class Robot:
         """ Pivoter ce robot de 90° vers la droite. """
         self.direction = (self.direction + 1) % 4
 
-    def afficher(self, prefix=''):
-        print(f"{prefix}Robot(x={self.x}, y={self.y}, direction={Robot._nomDirection(self.direction)})")
+    def __repr__(self, prefix=''):
+        return f"{prefix}Robot(x={self.x}, y={self.y}, direction={Robot._nomDirection(self.direction)})"
 
 # Exemple et test
 if __name__ == '__main__':
     r1=Robot(4,10,'est')
     assert r1.x==4 and r1.y==10 and r1.direction==1
-    r1.afficher(prefix='r1 = ')
+    print(r1)
     r2 = Robot(15, 7, 'sud')
     assert r2.x==15 and r2.y==7 and r2.direction==2
-    r2.afficher(prefix='r2 = ')
+    print(r2)
     r1.pivoter()
     assert r1.x==4 and r1.y==10 and r1.direction==2
-    r1.afficher(prefix='pivoter r1 = ')
+    print(r1)
     r2.avancer()
     assert r2.x==15 and r2.y==6 and r2.direction==2
-    r2.afficher(prefix='avancer r2 = ')
+    print(r2)
     #Utilisation comme fonction dans un namespace ... 
     Robot.pivoter(r2)
-    Robot.afficher(r2, prefix='r2 = ')
+    print(r2)
     print('Robot.pivoter :', Robot.pivoter)
     print('r2.pivoter :', r2.pivoter)
 

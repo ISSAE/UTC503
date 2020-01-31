@@ -21,6 +21,38 @@ def fact(n):
     else:
         return n*fact(n-1)
 
+def fact(n):
+    if n:
+        return n*fact(n-1)
+    else:
+        return 1
+
+#Calcul de la taille d'une liste version récursive
+def taille(l):
+    if l:
+        return 1+ taille(l[1:])
+    else:
+        return 0
+
+# Calcul de la somme des elément d'une liste
+# Version récursive
+def somme(l):
+    ''' Somme de tous les éléments de la liste
+        
+        :param l: la liste
+        si n le nombre d'élement
+        somme(l)=l[0]+...+l[i]+....+l[n-1]
+
+        ou récursivement
+        somme(l)=l[0]+somme(reste(l)) reste(l) est l[1:]
+        somme([])=0 
+    '''
+    print("Appel de somme avec ",l)
+    if l:
+        return l[0]+ somme(l[1:])
+    else:
+        return 0
+
 def calculette():
     while (True):
         exp=input("Entrer votre expression : ")
@@ -61,3 +93,12 @@ def factAndOr(n):
 fonc=uneFonc
 
 #uneFonc=decorer(uneFonc)
+
+
+#Pour le passage de param1ètre
+def f(x):
+    print(id(x))
+    x=100
+    print(id(x))
+    print(id(100))
+

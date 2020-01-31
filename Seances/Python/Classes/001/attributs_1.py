@@ -2,6 +2,8 @@ class Point:
     def reset(self): 
         self.x = 0 
         self.y = 0 
+    def f(self):
+        print(self.v)
  
 p = Point()
 p.x=10

@@ -30,7 +30,7 @@ Pouvoir aborder un nouveau langage de programmation ou une nouvelle bibliothèqu
 
 le cours est fortement inspiré du cours Moodle de lecnam.net de l’année précedente avec adaptation à Python (partie impérative et objet) et complément Map-Reduce et programmation réactive
 Syllabus et rythme prévu (1 séance ou activité = 1 ou 2 semaines; 3 ou 6h)
-### Séance 1 : Introduct### ion générale et les paradigmes
+### Séance 1 : Introduction générale et les paradigmes
 ### Séance 2 : Programmation impérative en Python : algorithmique et sous-programmes. Premier Devoir
 ### Séance 3 : inversion de contrôle et objet en Python
 ### Séance 4 : programmation fonctionnelle : les fondements lambda calcul
@@ -39,3 +39,9 @@ Syllabus et rythme prévu (1 séance ou activité = 1 ou 2 semaines; 3 ou 6h)
 ### Séance 7 : Programmation réactive: ReactiveX (java et python)
 
 
+# Liens utiles et référence
+
+1. Les [code des séances](Seances/)
+2. Les [exemples](Exemples/) suplémentaires
+3. Des [Complément](Complements/) ne faisant pas necessairement partie du programme
+4. Certaines [solutions](Solutions/) aux ED/TP/Devoirs

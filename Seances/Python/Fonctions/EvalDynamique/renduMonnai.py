@@ -1,7 +1,7 @@
-systemePieces=[100,50,20,10,5,1]
-somme=1523
+_systemePieces=[100,50,20,10,5,1]
+_somme=153
 #exemple redre 153 => [(100,1),(50,1),(20,0),(5,0),(1,3)]
-def rendreUneSolution(somme,sp=systemePieces):
+def rendreUneSolution(somme=_somme,sp=_systemePieces):
     #la priece la plus grande
     if sp:
         pg=sp[0]
@@ -12,18 +12,28 @@ def rendreUneSolution(somme,sp=systemePieces):
     else:
         return []
 
-def rendreTouteSolution(somme,sp=systemePieces):
-    #la priece la plus grande
-    if sp:
+def rendreTouteSolution(somme=_somme,sp=_systemePieces):
+    print(somme,sp,sp[0])
+    if sp[0] == 1:
+        #La somme restante doit être rendu entièrement avec des pièces de 1
+        return [[{1:somme}]]
+    else:
+        # En principe il y a encore plusieurs pièces dans le système
         pg=sp[0]
         #somme=q*pg+r
-        q=somme//pg
+        q=somme//pg 
         # r=somme%pg
-        return [[(pg,v),*rendreUneSolution(somme-v*pg,sp[1:])] for v in range(q+1)]
-    else:
-        return []
+        return [ensemblePossibilité(somme, pg,v,sp[1:]) for v in range(q+1)]
 
+def ensemblePossibilité(somme, piece, nbPieces, restePieces):
+    print(f"dans ensemble {rendreTouteSolution(somme-nbPieces*piece,restePieces)}")
+    return [{piece:nbPieces,**t} for t in flatten(rendreTouteSolution(somme-nbPieces*piece,restePieces))]
+
+flatten = lambda l: [item for sublist in l for item in sublist]
+
+#exemple et test
 if __name__ == '__main__':
-    assert rendreUneSolution(somme) == [(100, 15), (50, 0), (20, 1), (10, 0), (5, 0), (1, 3)]
-    assert rendreTouteSolution(somme) == [[(100, 0), (50, 30), (20, 1), (10, 0), (5, 0), (1, 3)], [(100, 1), (50, 28), (20, 1), (10, 0), (5, 0), (1, 3)], [(100, 2), (50, 26), (20, 1), (10, 0), (5, 0), (1, 3)], [(100, 3), (50, 24), (20, 1), (10, 0), (5, 0), (1, 3)], [(100, 4), (50, 22), (20, 1), (10, 0), (5, 0), (1, 3)], [(100, 5), (50, 20), (20, 1), (10, 0), (5, 0), (1, 3)], [(100, 6), (50, 18), (20, 1), (10, 0), (5, 0), (1, 3)], [(100, 7), (50, 16), (20, 1), (10, 0), (5, 0), (1, 3)], [(100, 8), (50, 14), (20, 1), (10, 0), (5, 0), (1, 3)], [(100, 9), (50, 12), (20, 1), (10, 0), (5, 0), (1, 3)], [(100, 10), (50, 10), (20, 1), (10, 0), (5, 0), (1, 3)], [(100, 11), (50, 8), (20, 1), (10, 0), 
-(5, 0), (1, 3)], [(100, 12), (50, 6), (20, 1), (10, 0), (5, 0), (1, 3)], [(100, 13), (50, 4), (20, 1), (10, 0), (5, 0), (1, 3)], [(100, 14), (50, 2), (20, 1), (10, 0), (5, 0), (1, 3)], [(100, 15), (50, 0), (20, 1), (10, 0), (5, 0), (1, 3)]]
+    assert rendreUneSolution() == [(100, 1), (50, 1), (20, 0), (10, 0), (5, 0), (1, 3)]
+    print(rendreUneSolution(153,[100,50,20,10,5,1]))
+    assert rendreTouteSolution() == [[(100, 0), (50, 3), (20, 0), (10, 0), (5, 0), (1, 3)], [(100, 1), (50, 1), (20, 0), (10, 0), (5, 0), (1, 3)]]
+    print(rendreTouteSolution(153,[100,50,20,10,5,1]))

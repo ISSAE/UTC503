@@ -11,14 +11,21 @@
 '''
 class Mammiferes:
     espece='Mammifères' #Attribut de classe
-    def __init__(self,nom, age):
-        self.nom=nom #attribut d'instance
-        self.age=age
+    def __init__(self,nom='', age=0):
+        if (isinstance(nom,str)):
+            self._nom=nom #attribut d'instance
+        else:
+            self._nom=str(nom)
+        self._age=age
+    def getNom(self):
+        return(self._nom)
+    def setNom(self,nom):
+        self._nom=nom
     def setEspece(self,esp):
         Mammiferes.espece=esp
     def setNespece(self,esp):
         self.espece=esp
-    def setDespece(self):
+    def setDespece(self,esp):
         espece=esp
 
 

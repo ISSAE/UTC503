@@ -1,4 +1,9 @@
 class X:
+   class Z:
+      x=100
+   x=3
+   def add(x,y):
+          return x+y
    def m(self):
      return "dans X"
 
