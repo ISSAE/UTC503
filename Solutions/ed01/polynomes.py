@@ -20,6 +20,7 @@ def PWhile(l,x):
     xk=1 # xk representera x**i dans la boucle
     while (i< len(l)):
         # Invariant P = a_0 + a_1 x + ... a_i x**i
+        # P_etape(i+1) = P_etape(i) + a_(i+1)*x^(i+1)
         P= P+ l[i]*xk
         xk=x*xk
         i=i+1
