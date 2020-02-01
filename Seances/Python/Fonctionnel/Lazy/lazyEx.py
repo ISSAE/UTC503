@@ -1,6 +1,9 @@
 def f(x):
     return x+1
 
+def flazy(x):
+    yield x+1
+
 def myrange(debut, fin):
     yield debut
     while debut < fin:
