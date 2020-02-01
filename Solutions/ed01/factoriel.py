@@ -48,8 +48,13 @@ def factIter(n):
         F=F*(i+1)
     return F
 
+<<<<<<< HEAD
+#Factoriel récursive en pure fonction (lambda) n<0 et >0
+factL = lambda n: n*factL(n-1 if n>=0 else n+1) if n else 1
+=======
 #Factoriel récursive en pure fonction (lambda)
 factL = lambda n: n*factL(n-1) if n else 1
+>>>>>>> da1cc66be32e352b7e138096779b9553b4c7e1c2
 
 #Une astuce pour tester le module quand on lance le programme directement 
 # python factoriel.py

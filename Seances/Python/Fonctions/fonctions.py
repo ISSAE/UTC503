@@ -55,7 +55,7 @@ def somme(l):
 
 def calculette():
     while (True):
-        exp=input("Entrer votre formule : ")
+        exp=input("Entrer votre expression : ")
         if(exp == '.'):
             return None
         print(eval(exp))

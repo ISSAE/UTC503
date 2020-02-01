@@ -39,3 +39,9 @@ Syllabus et rythme prévu (1 séance ou activité = 1 ou 2 semaines; 3 ou 6h)
 ### Séance 7 : Programmation réactive: ReactiveX (java et python)
 
 
+# Liens utiles et référence
+
+1. Les [code des séances](Seances/)
+2. Les [exemples](Exemples/) suplémentaires
+3. Des [Complément](Complements/) ne faisant pas necessairement partie du programme
+4. Certaines [solutions](Solutions/) aux ED/TP/Devoirs

@@ -23,4 +23,8 @@ def do_that(v, x):
     """Une fonction simple pour montrer l'utilisation
     du wrapping"""
     print("Execution des instructions %s %d" % (v, x))
+    return(v,x)
 
+# @mon_decorateur equivalent a do_that=mon_decorateur(do_that)
+
+print(f"Je print {do_that(1,2)}")

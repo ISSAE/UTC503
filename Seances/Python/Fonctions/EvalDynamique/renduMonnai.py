@@ -21,9 +21,9 @@ def rendreTouteSolution(somme=_somme,sp=_systemePieces):
         # En principe il y a encore plusieurs pièces dans le système
         pg=sp[0]
         #somme=q*pg+r
-        q=somme//pg
+        q=somme//pg 
         # r=somme%pg
-        return [ensemblePossibilité(somme, sp[0],v,sp[1:]) for v in range(q+1)]
+        return [ensemblePossibilité(somme, pg,v,sp[1:]) for v in range(q+1)]
 
 def ensemblePossibilité(somme, piece, nbPieces, restePieces):
     print(f"dans ensemble {rendreTouteSolution(somme-nbPieces*piece,restePieces)}")
