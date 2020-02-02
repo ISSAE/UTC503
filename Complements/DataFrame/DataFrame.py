@@ -6,19 +6,17 @@ class DataFrame:
     def insert(self,ligne):
         self.donnees.append(ligne)
 
-    def _strLigne(ligne):
-        from functools import reduce
-        return reduce(lambda acc,s: f"{acc}\t{s}",ligne)
-
-    def _strMultiLigne(mligne):
-        from functools import reduce
-        return reduce(lambda acc,s: f"{acc}\n{DataFrame._strLigne(s)}",mligne,'---')
-
     def __str__(self):
+        from functools import reduce
+        def _strLigne(ligne):    
+           return reduce(lambda acc,s: f"{acc}\t{s}",ligne)
+        def _strMultiLigne(mligne):
+           return reduce(lambda acc,s: f"{acc}\n{_strLigne(s)}",mligne,'---')
         return f"""
-                {DataFrame._strLigne(self.champs)}
-                {DataFrame._strMultiLigne(self.donnees)}
+                {_strLigne(self.champs)}
+                {_strMultiLigne(self.donnees)}
         """
+
     #On peut écrire les méthodes comme ceci aussi
     _getIndex = lambda self, nomChamp: self.champs.index(nomChamp)
     
