@@ -8,7 +8,8 @@ Module polynome : à tester avec -m doctest -v
 """
 
 def polynome(coef):
-    """ coef coefficient d'un polynome P(x)=co_0 + co_1*x^1 + ... co_n*c^n 
+    """ 
+        coef coefficient d'un polynome P(x)=co_0 + co_1*x^1 + ... co_n*c^n 
         résultat fonction p(x) : la fonction définissant le polynome 
         
         Exemples :
