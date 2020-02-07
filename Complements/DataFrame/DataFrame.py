@@ -1,9 +1,9 @@
 class DataFrame:
-    def __init__(self,champs):
+    def __init__(self,*champs):
         self.champs=champs
         self.donnees=[]
 
-    def insert(self,ligne):
+    def insert(self,*ligne):
         self.donnees.append(ligne)
 
     def __str__(self):
@@ -12,7 +12,7 @@ class DataFrame:
            return reduce(lambda acc,s: f"{acc}\t{s}",ligne)
         def _strMultiLigne(mligne):
            return reduce(lambda acc,s: f"{acc}\n{_strLigne(s)}",mligne,'---')
-        return f"""
+        return f"""\n
                 {_strLigne(self.champs)}
                 {_strMultiLigne(self.donnees)}
         """
@@ -36,9 +36,9 @@ class DataFrame:
         print(param,params)
         return [self._projection(l,*param) for l in self.donnees if self._conditions(l,**params)]
 
-df=DataFrame(['Nom', 'Prenom', 'tel', 'email']) # create table ;)
-df.insert(['Emile', 'Dupont', '336xxyyzzww', 'de@isae.edu.lb'])
-df.insert(['Pascal', 'Fares', '03xxxyyy', 'pf@isae.edu.lb'])
+df=DataFrame('Nom', 'Prenom', 'tel', 'email') # create table ;)
+df.insert('Emile', 'Dupont', '336xxyyzzww', 'de@isae.edu.lb')
+df.insert('Pascal', 'Fares', '03xxxyyy', 'pf@isae.edu.lb')
 
 print(df._conditions(['Emile', 'Dupont', '336xxyyzzww', 'de@isae.edu.lb'],
                Nom=lambda n: n=='Emile'))

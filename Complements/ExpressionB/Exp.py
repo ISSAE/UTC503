@@ -19,6 +19,8 @@ class Const(Exp):
         return f"C:{self.e}"
   def prefixe(self):
         return f"C:{self.e}"
+  def eval(self):
+      return self.e
     
 class ExpB(Exp):
     """ Les Expression binaire des expression arithmétique""" 
@@ -37,9 +39,15 @@ class ExpB(Exp):
     # def __str__(slef):
     #    return "("+str(self.e1)+" "+str(self.op)+ " "+str(self.e2)+")"
     def postfixe(self):
-        return f"{self.e1.postfixe()} {self.e2.postfixe()} {self.op}"
-    
+        return f"{self.e1.postfixe()} {self.e2.postfixe()} {self.op}"   
     def prefixe(self):
         return f"{self.op}({self.e1.prefixe()},{self.e2.prefixe()})"
+    def eval(self):
+        if self.op == '+':
+            self.e1.eval() + self.e2.eval()
+        elif self.op == '*':
+            self.e1.eval() * self.e2.eval()
+
+        
        
   
