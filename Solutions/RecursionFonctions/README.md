@@ -1,6 +1,6 @@
 # une solution à Loka Voltera
 
-Pour récursivité, impératif, générateur voir [LotkaVolterra.py](Solutions/RecursionFonctions/LotkaVolterra.py)
+Pour récursivité, impératif, générateur voir [LotkaVolterra.py](https://github.com/ISSAE/UTC503/blob/master/Solutions/RecursionFonctions/LotkaVolterra.py)
 
 Rappel trés bref du problème:
 
