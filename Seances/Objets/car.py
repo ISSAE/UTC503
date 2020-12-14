@@ -6,3 +6,6 @@ class Car:
         self.color = color
         self.model = model
         self.year = year
+
+if __name__ == '__main__':
+    car = Car('red', 'Renault', 2015)
