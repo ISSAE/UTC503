@@ -1,6 +1,4 @@
-import nom1
-
-print("Je suis dans nom1", __name__)
+print("Je suis dans nom2", __name__)
 
 x = 2
 

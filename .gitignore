@@ -4,4 +4,5 @@ a.out
 *.o
 *.class
 .vscode
+workspace.code-workspace
 

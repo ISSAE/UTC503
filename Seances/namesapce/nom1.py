@@ -1,5 +1,3 @@
-import nom2
-
 print("Je suis dans nom1", __name__)
 
 x = 1
