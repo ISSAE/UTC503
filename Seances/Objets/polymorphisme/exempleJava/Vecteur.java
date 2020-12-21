@@ -21,7 +21,7 @@ public class Vecteur {
         _vec = termes;
     }
 
-    /** LES ACCESSEURS */
+    /** LES ACCESSEURS (mutateurs) getters/setters */
     // ! ceci pourrait poser un problème _vec est une référence vers termes
     public void setVec(double[] termes) {
         _vec = termes;
@@ -36,7 +36,7 @@ public class Vecteur {
     }
 
     public double getVec(int i) {
-        return _vec[i]
+        return _vec[i];
     }
 
     /** Les opérations */

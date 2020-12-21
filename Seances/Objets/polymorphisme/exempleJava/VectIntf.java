@@ -1,7 +1,7 @@
 package exempleJava;
 
 /**
- * Interface poublique des vercteurs
+ * Interface publique des vercteurs
  * addition de vecteur v1+v2
  * multiplication par un scalaire l*v
  * produire scalaire v1*v2
