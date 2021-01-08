@@ -1,3 +1,4 @@
+print ("Un print de name", __name__)
 class Car:
 
     wheels = 0
@@ -9,3 +10,4 @@ class Car:
 
 if __name__ == '__main__':
     car = Car('red', 'Renault', 2015)
+    print(car)

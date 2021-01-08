@@ -17,7 +17,7 @@ public class Vecteur {
     // Le compilateur choisit la méthode qui doit être appelée en fonction du nombre
     // et du type des arguments .
 
-    public Vecteur(double ...termes) {
+    public Vecteur(double ...termes) { // double[] termes
         _vec = termes;
     }
 
@@ -44,7 +44,8 @@ public class Vecteur {
     // Ajoute autre au vecteur courant
     // Translation (vec1 + vec2)
     public void add(Vecteur autre) {
-        // TODO: faut vérifier que les 2 vecteurs on la même dimension
+        // faut vérifier que les 2 vecteurs on la même dimension
+        assert _vec.length == autre._vec.length : "Les vecteurs doivent être de dimension égale";
         for (int i = 0; i < _vec.length; i++) {
             _vec[i] += autre._vec[i]; // vec[i] = vec[i] + autre.vec[i]
         }
@@ -53,6 +54,7 @@ public class Vecteur {
     //produit scalaire vec1 * vec2
     public double mult(Vecteur autre) {
         // TODO: faut vérifier que les 2 vecteurs on la même dimension
+        assert _vec.length == autre._vec.length : "Les vecteurs doivent être de dimension égale";
         int s=0;
         for (int i = 0; i < _vec.length; i++) {
              s += _vec[i] * autre._vec[i]; // vec[i] = vec[i] + autre.vec[i]
