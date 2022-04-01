@@ -9,7 +9,7 @@ class Robot:
         return 'nord est sud ouest'.split()[idDirection]
 
     def _idDirection(nomDirection):
-        return ' nord est sud ouest'.split().index(nomDirection)
+        return 'nord est sud ouest'.split().index(nomDirection)
 
     def __init__(self, x, y, direction):
         """ Initialiser le robot self à partir de sa position (x, y) et sa direction. """

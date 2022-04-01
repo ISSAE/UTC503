@@ -8,5 +8,3 @@ decale(2)('A')
 decale(26)('A')
 ''.join(map(decale(1), 'ABCD'))
 ''.join(map(decale(26), 'Bonjour'))
-
-def 
